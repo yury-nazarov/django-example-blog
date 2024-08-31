@@ -4,8 +4,17 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+class PublishedManager(models.Manager):
+    """
+    Пример создания модельного мменеджера
+    """
+    def get_queryset(self):
+        return super().get_queryset().filter(status=Post.Status.PUBLISHED)
 
 class Post(models.Model):
+
+    objects = models.Manager()      # менеджер по умолчанию
+    published = PublishedManager()  # Конкретно прикладной менеджер
 
     class Status(models.TextChoices):
         DRAFT = 'DF', 'Draft'
