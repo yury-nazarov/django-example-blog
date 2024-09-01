@@ -87,3 +87,13 @@ Post.objects.order_by('-title')
 >>> post.delete()
 (1, {'blog.Post': 1})
 ```
+
+# Шаблоны
+
+- `{% tag %}`
+- `{{ variable }}`
+- `{{ variable|filter }}`
+
+## Docs
+- [https://docs.djangoproject.com/en/5.1/ref/templates/language/]()
+- Все встроенные теши, переменные и фильтры: [https://docs.djangoproject.com/en/5.1/ref/templates/builtins/]()
