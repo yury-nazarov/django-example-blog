@@ -97,3 +97,5 @@ Post.objects.order_by('-title')
 ## Docs
 - [https://docs.djangoproject.com/en/5.1/ref/templates/language/]()
 - Все встроенные теши, переменные и фильтры: [https://docs.djangoproject.com/en/5.1/ref/templates/builtins/]()
+
+![](img/docs/request_responce.png)
