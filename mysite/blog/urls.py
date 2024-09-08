@@ -7,7 +7,8 @@ app_name = 'blog'
 # Django просматривает все url и останавливается на том,
 # который первый подходит под шаблон
 urlpatterns = [
-    path('', views.post_list, name='post_list'),
+    #path('', views.post_list, name='post_list'),
+    path('', views.PostListViews.as_view(), name='post_list'),
     path('<int:year>/<int:month>/<int:day>/<slug:post>',
          views.post_detail,
          name='post_detail'),
